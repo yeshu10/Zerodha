@@ -3,10 +3,12 @@ import Sidebar from './Sidebar';
 import ThemeToggleButton from './ThemeToggleButton';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; // Import icons
 import { useTheme } from '../context/ThemeContext';
+import logo from '../assets/Zerodhalogo.png';
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme } = useTheme();  // Access the current theme from context
+
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -16,6 +18,7 @@ const Header = () => {
         <button onClick={toggleSidebar} className="p-2 hidden md:flex">
           {sidebarOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />} {/* Button to toggle sidebar */}
         </button>
+        <div> <img src={logo} alt="Zerodha" className="w-8 h-8 "/></div>
         <div className="text-2xl font-bold">Zerodha</div>
         <nav className="hidden md:flex space-x-4">
           <a href="#signup" className="hover:underline">Sign Up</a>
