@@ -7,6 +7,7 @@ import presslogos from '../assets/press-logos.png';
 import opening from '../assets/opening.svg';
 import equity from '../assets/equity.svg';
 import intraday from '../assets/intraday.svg';
+import Varsity from '../assets/Varsity.svg';
 
 const Zerodha = () => {
   const { theme } = useTheme(); // Access the current theme from context
@@ -19,7 +20,7 @@ const Zerodha = () => {
           <img
             src={Zerodhalanding}
             alt="Zerodha"
-            className="w-full max-w-lg h-auto object-cover" // Keep the same size
+            className="w-full max-w-lg h-auto object-cover"
           />
         </div>
 
@@ -32,7 +33,7 @@ const Zerodha = () => {
         </div>
 
         {/* Content section */}
-        <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+        <div className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
           {/* Text Content */}
           <div className="flex-1 md:pr-8">
             <h2 className="text-2xl font-bold mb-4">Trust with confidence</h2>
@@ -58,7 +59,7 @@ const Zerodha = () => {
             <img
               src={ecosystem}
               alt="Investment"
-              className="w-full h-auto object-cover max-w-md mx-auto" // Keep the same size
+              className="w-full h-auto object-cover max-w-100 mx-auto"
             />
           </div>
         </div>
@@ -68,57 +69,102 @@ const Zerodha = () => {
           <img
             src={presslogos}
             alt="Centered"
-            className="w-full h-auto object-contain"
+            className={`w-full h-auto object-contain ${theme === 'dark' ? 'filter brightness-75' : ''}`} // Optional filter for dark theme
           />
         </div>
 
         {/* Pricing Section */}
-        <div className="container mx-auto px-4">
-  {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-4"> */}
-  <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
-    {/* First Column */}
-    {/* <div className="flex flex-col items-center text-center md:text-left md:col-span-2"> */}
-    <div className="flex-1 md:pr-8">
-      <h2 className="text-2xl font-bold mb-4">Unbeatable Pricing</h2>
-      <p className="text-lg text-gray-700 mb-4">
-        We pioneered the concept of discount broking and price transparency in India. Flat fees and no hidden charges.
-      </p>
-    </div>
-    <div className="flex justify-between">
-  {/* Second Column */}
-  <div className="flex items-center text-center md:text-left">
-    <img
-      src={opening}
-      alt="Opening"
-      className="w-20 h-auto object-contain mb-4"
-    />
-  </div>
+        <div className={`flex items-center justify-center py-16 px-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'} ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+          <div className="container mx-auto flex flex-col md:flex-row items-center space-x-8">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl font-bold mb-4">Unbeatable Pricing</h2>
+              <p className="text-lg mb-4">
+                We pioneered the concept of discount broking and price transparency in India. Flat fees and no hidden charges.
+              </p>
+            </div>
+            {/* Right Side */}
+            <div className="flex-1 flex justify-center mb-8 md:mb-0">
+              <div className="flex items-center space-x-8"> {/* Adjusted space between items */}
+                {/* Second Column */}
+                <div className="flex items-center justify-center">
+                  <img
+                    src={opening}
+                    alt="Opening"
+                    className="w-16 h-auto object-contain" // Adjusted size
+                  />
+                </div>
 
-  {/* Third Column */}
-  <div className="flex items-center text-center md:text-left">
-    <img
-      src={equity}
-      alt="Equity"
-      className="w-20 h-auto object-contain mb-4"
-    />
-  </div>
+                {/* Third Column */}
+                <div className="flex items-center justify-center">
+                  <img
+                    src={equity}
+                    alt="Equity"
+                    className="w-16 h-auto object-contain" // Adjusted size
+                  />
+                </div>
 
-  {/* Fourth Column */}
-  <div className="flex items-center text-center md:text-left">
-    <img
-      src={intraday}
-      alt="Intraday"
-      className="w-20 h-auto object-contain mb-4"
-    />
-  </div>
-</div>
+                {/* Fourth Column */}
+                <div className="flex items-center justify-center">
+                  <img
+                    src={intraday}
+                    alt="Intraday"
+                    className="w-16 h-auto object-contain" // Adjusted size
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </div>
-</div>
+        {/* Education and Community Section */}
+        <div className={`flex items-center justify-center py-16 px-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'} ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+          <div className="container mx-auto flex flex-col md:flex-row items-center space-x-8">
+            {/* Left Side: Image */}
+            <div className="flex-1 flex justify-center mb-8 md:mb-0">
+              <img
+                src={Varsity}
+                alt="Education"
+                className="w-full max-w-md h-auto object-cover"
+              />
+            </div>
+            
+            {/* Right Side: Text Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl font-bold mb-4">Free and Open Market Education</h2>
+              <p className="text-lg mb-4">
+                Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.
+              </p>
+              <h3 className="text-xl font-semibold mb-2">Varsity</h3>
+              <p className="text-lg mb-4">
+                TradingQ&A, the most active trading and investment community in India for all your market-related queries.
+              </p>
+              <h3 className="text-xl font-semibold mt-4">TradingQ&A</h3>
+            </div>
+          </div>
+        </div>
 
+        {/* Sign Up Section */}
+        <div className={`py-16 px-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'} text-center ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
+          <div className="container mx-auto">
+            {/* Heading and Description */}
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-4">Open a Zerodha Account</h2>
+              <p className="text-lg mb-6">
+                Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.
+              </p>
+            </div>
 
-
-
+            {/* Sign Up Button */}
+            <div>
+              <a
+                href="#"
+                className="inline-block px-6 py-3 text-white bg-blue-500 rounded-lg font-semibold text-lg hover:bg-blue-600 transition duration-300 w-full md:w-auto"
+              >
+                Sign Up Now
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
