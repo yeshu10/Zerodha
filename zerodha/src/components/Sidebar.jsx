@@ -14,11 +14,11 @@ const Sidebar = ({ isOpen, onClose }) => {
         </button>
       </div>
       <nav className="flex flex-col space-y-4 p-4">
-        <a href="#signup" className="hover:underline">Sign Up</a>
-        <a href="#about" className="hover:underline">About</a>
-        <a href="#products" className="hover:underline">Products</a>
-        <a href="#pricing" className="hover:underline">Pricing</a>
-        <a href="#support" className="hover:underline">Support</a>
+        <a href="signup" className="hover:underline">Sign Up</a>
+        <a href="about" className="hover:underline">About</a>
+        <a href="products" className="hover:underline">Products</a>
+        <a href="pricing" className="hover:underline">Pricing</a>
+        <a href="support" className="hover:underline">Support</a>
       </nav>
     </div>
   );
