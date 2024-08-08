@@ -25,11 +25,11 @@ const Header = () => {
       </div>
       <div className="flex-1 flex justify-center items-center space-x-10">
         <nav className="hidden md:flex space-x-10">
-          <a href="#signup" className="hover:underline">Sign Up</a>
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#products" className="hover:underline">Products</a>
-          <a href="#pricing" className="hover:underline">Pricing</a>
-          <a href="#support" className="hover:underline">Support</a>
+          <a href="signup" className="hover:underline">Sign Up</a>
+          <a href="about" className="hover:underline">About</a>
+          <a href="products" className="hover:underline">Products</a>
+          <a href="pricing" className="hover:underline">Pricing</a>
+          <a href="support" className="hover:underline">Support</a>
         </nav>
       </div>
       <div className="flex items-center space-x-4">

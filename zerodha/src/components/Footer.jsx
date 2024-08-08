@@ -6,7 +6,7 @@ const Footer = () => {
   const { theme } = useTheme();  // Access the current theme from context
 
   return (
-    <footer className={`py-6 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-700'}`}>
+    <footer className={`py-6 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-700'} relative`}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Logo and Copyright */}
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
         
         {/* Legal & Contact Information */}
-        <div className="mt-8 border-t pt-4 text-[10px] ">
+        <div className="mt-8 border-t pt-4 text-[10px]">
           <h4 className="font-bold mb-2">Legal & Contact Information</h4>
           <p>Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity Trading through Zerodha Commodities Pvt. Ltd. MCX: 46025; NSE-50001 – SEBI Registration no.: INZ000038238</p>
           <p>Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India.</p>
@@ -78,18 +78,17 @@ const Footer = () => {
           <p>Attention investors: 1) Stock brokers can accept securities as margins from clients only by way of pledge in the depository system w.e.f September 01, 2020. 2) Update your e-mail and phone number with your stock broker / depository participant and receive OTP directly from depository on your e-mail and/or mobile number to create pledge. 3) Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.</p>
           <p>"Prevent unauthorised transactions in your account. Update your mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly from Exchange on your mobile/email at the end of the day. Issued in the interest of investors. KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."</p>
           <p>Dear Investor, if you are subscribing to an IPO, there is no need to issue a cheque. Please write the Bank account number and sign the IPO application form to authorize your bank to make payment in case of allotment. In case of non allotment the funds will remain in your bank account. As a business we don't give stock tips, and have not authorized anyone to trade on behalf of others. If you find anyone claiming to be part of Zerodha and offering such services, please create a ticket <a href="#" className="hover:underline">here</a>.</p>
-          <p className="flex space-x-8 text-[10] justify-center">
-  <span>NSE</span>
-  <span>BSE</span>
-  <span>MCX</span>
-  <span>Terms & conditions</span>
-  <span>Policies & procedures</span>
-  <span>Privacy policy</span>
-  <span>Disclosure</span>
-  <span>For investor's attention</span>
-  <span>Investor charter</span>
-</p>
-
+          <p className="flex space-x-8 text-[10px] justify-center">
+            <span>NSE</span>
+            <span>BSE</span>
+            <span>MCX</span>
+            <span>Terms & conditions</span>
+            <span>Policies & procedures</span>
+            <span>Privacy policy</span>
+            <span>Disclosure</span>
+            <span>For investor's attention</span>
+            <span>Investor charter</span>
+          </p>
         </div>
       </div>
     </footer>

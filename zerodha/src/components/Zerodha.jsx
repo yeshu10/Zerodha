@@ -1,4 +1,3 @@
-// src/components/Zerodha.jsx
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Zerodhalanding from '../assets/Zerodhalanding.png'; // Replace with your image path
@@ -13,7 +12,7 @@ const Zerodha = () => {
   const { theme } = useTheme(); // Access the current theme from context
 
   return (
-    <section className={`py-16 px-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'}`}>
+    <section className={`py-16 px-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'} overflow-x-hidden`}>
       <div className="container mx-auto px-4">
         {/* Image in center */}
         <div className="flex justify-center mb-12">
@@ -59,7 +58,7 @@ const Zerodha = () => {
             <img
               src={ecosystem}
               alt="Investment"
-              className="w-full h-auto object-cover max-w-100 mx-auto"
+              className="w-full h-auto object-cover max-w-full mx-auto"
             />
           </div>
         </div>
