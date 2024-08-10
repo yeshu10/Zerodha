@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Zerodha from './components/Zerodha';
 import Signup from './components/Signup'; // Import your SignupPage component
+import Products from './components/Products';
 
 const App = () => {
   return (
@@ -17,6 +18,14 @@ const App = () => {
             element={
               <>
                 <Signup />
+              </>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <>
+                <Products />
               </>
             }
           />
